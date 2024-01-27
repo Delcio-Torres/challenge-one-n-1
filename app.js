@@ -1,8 +1,8 @@
-let letra = [' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
-  'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'á', 'é', 'í', 'ó', 'ú', 'ê', 'ô'];
+let letra = [' ', '.', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+  'J', 'K', 'L', '?', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'á', 'é', 'í', 'ó', 'ú', 'ê', 'ô', '!'];
 
-let cript = ['6', 'F', 'ê', 'W', '9', 'l', 'k', 'Q', 'j', 'h', 'J', 'é', 'X', 'g', 'í', 'E', 'K', 'n', 'B', 'd', 'I', 's', 'ó', 'C', '8', 'Y', 'p', 'H', 'o', 'G', '3', 'V', 'S', 'R', '4', 'T', 'U', 'y', 'D', 't', 'r',
-  'Z', '0', 'L', 'w', 'q', 'P', 'á', 'm', 'M', 'f', 'A', 'b', 'v', 'N', 'O', 'c', 'ú', 'x', 'z']
+let cript = ['6', 'F', 'n', 'W', '9', 'l', 'k', 'Q', '!', 'j', 'h', 'J', 'é', 'X', 'g', 'í', 'E', 'K', '.', 'B', 'd', 'I', 's', 'ó', 'C', '8', 'Y', 'p', 'H', 'o', 'G', '3', 'V', 'S', 'R', '4', 'T', 'U', 'y', 'D', 't', 'r',
+  'Z', '0', 'L', 'w', 'q', 'P', 'á', 'm', 'M', 'f', 'A', 'b', 'ê', '?', 'v', 'N', 'O', 'c', 'ú', 'x', 'z']
 
 let digito;
 let palavraCodificada = '';
@@ -13,7 +13,7 @@ let palavra = '';
 
 function criptografar() {
   palavra = texto1.value;
-  for (let i = 0; i <= palavra.length; i++) {
+  for (let i = 0; i < palavra.length; i++) {
     for (let y = 0; y <= cript.length; y++) {
       digito = palavra.substring(i, i + 1);
       if (digito == letra[y]) {
