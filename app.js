@@ -13,30 +13,34 @@ let palavra = '';
 
 function criptografar() {
   palavra = texto1.value;
-  for (let i = 0; i < palavra.length; i++) {
-    for (let y = 0; y <= cript.length; y++) {
-      digito = palavra.substring(i, i + 1);
-      if (digito == letra[y]) {
-        palavraCodificada += cript[y];    
+  if (texto1.value != '') {
+    for (let i = 0; i < palavra.length; i++) {
+      for (let y = 0; y <= cript.length; y++) {
+        digito = palavra.substring(i, i + 1);
+        if (digito == letra[y]) {
+          palavraCodificada += cript[y];
+        }
       }
     }
+    texto2.value = palavraCodificada;
+    palavraCodificada = '';
+    texto1.value = '';
   }
-  texto2.value = palavraCodificada;
-  palavraCodificada = '';
-  texto1.value = '';
 }
 
 function decriptografar() {
   let palavra2 = texto2.value;
-  for (let i = 0; i <= palavra2.length; i++) {
-    for (let y = 0; y <= cript.length; y++) {
-      digito = palavra2.substring(i, i + 1);
-      if (digito == cript[y]) {
-        palavraDecodificada += letra[y];    
+  if (texto2.value != '') {
+    for (let i = 0; i <= palavra2.length; i++) {
+      for (let y = 0; y <= cript.length; y++) {
+        digito = palavra2.substring(i, i + 1);
+        if (digito == cript[y]) {
+          palavraDecodificada += letra[y];
+        }
       }
     }
+    texto1.value = palavraDecodificada;
+    palavraDecodificada = '';
+    texto2.value = '';
   }
-  texto1.value = palavraDecodificada;
-  palavraDecodificada = '';
-  texto2.value = '';
 }
