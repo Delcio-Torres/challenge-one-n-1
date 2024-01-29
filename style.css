@@ -5,11 +5,23 @@
 }
 
 body{
-  background-color: #F3F5FC;
+  padding: 0;
+  margin: 0;
+  background-color: var(--Ligth-Background);
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .logo{
   height: 30px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--Dark-blue-dark-blue-300);
 }
 
 .apresentar{
@@ -41,6 +53,10 @@ flex-direction: column;
   gap: 30px;
 }
 
+textarea {
+  height: 500px;
+}
+
 button{
   display: flex;
   gap: 8px;
@@ -51,6 +67,7 @@ button{
   font-size: 15px;
   border: none;
   margin-top: 0.5rem;
+  cursor: pointer;
 }
 
 .botao__cript{
@@ -66,8 +83,14 @@ button{
 }
 
 @media(max-width: 1200px){
-  .apresentar{
+  .apresentar {
+    margin: auto;
+    max-width: 80%;
     flex-direction: column;
     gap: 5px;
+  }
+
+  textarea {
+    max-height: 200px;
   }
 }
